@@ -1,34 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>ATLAS Homeschool Testing</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9fbfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #002855;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    nav {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #002855;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h2 {
+      color: #002855;
+      margin-top: 40px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #0078d4;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #005fa3;
+    }
+
+    .alert {
+      background-color: #fff4cc;
+      padding: 15px;
+      border-left: 5px solid #ffcc00;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+      margin-top: 40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
 </head>
 
 <body>
+
+<header>
   <h1>ATLAS Homeschool Testing</h1>
+  <p>Spring 2026 Information & Registration</p>
+</header>
+
+<nav>
+  <a href="#register">Register</a>
+  <a href="#before">Before Testing</a>
+  <a href="#testing">Testing Day</a>
+  <a href="#after">After Testing</a>
+</nav>
+
+<div class="container">
 
   <h2>Welcome</h2>
-  <p>This site provides information for homeschool families participating in ATLAS testing.</p>
+  <p>
+    This website provides everything homeschool families need to register for ATLAS testing,
+    prepare for testing day, and access results.
+  </p>
 
-  <h2>Register</h2>
-  <a href="YOUR-GOOGLE-FORM-LINK-HERE" target="_blank">
-    Register for Testing
-  </a>
+  <p><strong>Please read all information carefully before registering your student.</strong></p>
 
-  <h2>Before Testing</h2>
+  <h2>Important Dates</h2>
   <ul>
-    <li>Device with secure browser</li>
-    <li>Working camera and microphone</li>
+    <li><strong>Registration Opens:</strong> January</li>
+    <li><strong>Registration Deadline:</strong> February</li>
+    <li><strong>Testing Window:</strong> March–April</li>
+    <li><strong>Score Reports Available:</strong> May</li>
   </ul>
 
-  <h2>Testing Day</h2>
-  <ul>
-    <li>Follow all instructions</li>
-    <li>No outside help</li>
-  </ul>
+  <div id="register">
+    <h2>Register for Testing</h2>
+    <p>Click below to register your student for ATLAS homeschool testing.</p>
 
-  <h2>After Testing</h2>
-  <p>Scores will be available in the ATLAS portal.</p>
+    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSffSnADZT0VjaEjtn3kZOsaWkwzIDBE_yrzpgMZU8DA26Vviw/viewform?usp=header" target="_blank">
+      Register Now
+    </a>
+
+    <div class="alert">
+      <strong>Important:</strong><br>
+      Students must be registered by the deadline to participate.
+      Late registrations cannot be accepted.
+    </div>
+  </div>
+
+  <div id="before">
+    <h2>Before Testing</h2>
+    <ul>
+      <li>Testing device with ATLAS Secure Browser</li>
+      <li>Working camera and microphone</li>
+      <li>Quiet, distraction-free environment</li>
+      <li>Blank scratch paper</li>
+      <li>Approved calculator (if allowed)</li>
+    </ul>
+  </div>
+
+  <div id="testing">
+    <h2>Testing Day Expectations</h2>
+    <ul>
+      <li>Students must follow all Test Administrator directions</li>
+      <li>Camera and microphone must remain on during testing</li>
+      <li>No outside help may be given during testing</li>
+      <li>Testing sessions have a scheduled stop time</li>
+    </ul>
+  </div>
+
+  <div id="after">
+    <h2>After Testing</h2>
+    <ul>
+      <li>Scores will be available through the ATLAS Family Portal</li>
+      <li>Families will receive instructions when reports are ready</li>
+      <li>Keep a copy of your student’s Individual Student Report (ISR)</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  Questions? Contact: april.weeks@ade.arkansas.gov
+</footer>
 
 </body>
 </html>
