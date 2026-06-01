@@ -90,7 +90,11 @@ body {
 .container > div {
   margin-bottom: 50px;
 }
-    
+   
+p {
+  margin-bottom: 10px;
+}
+ 
 
   </style>
 
@@ -129,14 +133,21 @@ body {
 
 <div>
   <h2>Important Dates</h2>
-  <ul>
-    <li><strong>Registration Opens:</strong> January</li>
-    <li><strong>Registration Deadline:</strong> February</li>
-    <li><strong>Testing Window:</strong> March–April</li>
-    <li><strong>Score Reports Available:</strong> May</li>
-  </ul>
+
+  <div class="alert">
+    <p><strong>Registration Opens:</strong> January</p>
+    <p><strong>Registration Deadline:</strong> February</p>
+    <p><strong>Testing Window:</strong> March–April</p>
+    <p><strong>Score Reports Available:</strong> May</p>
+  </div>
+
+.alert p {
+  margin: 5px 0;
+}
+
+  <p><strong>Important:</strong> Students must be registered by the deadline to participate in ATLAS testing. Late registrations cannot be accepted.</p>
 </div>
-``
+
 
   <div id="register">
     <h2>Register for Testing</h2>
