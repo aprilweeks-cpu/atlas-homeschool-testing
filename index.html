@@ -30,24 +30,30 @@ header p {
   font-size: 16px;
 }
 
-  nav {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 15px;
-    border-bottom: 2px solid #123c60;
-  }
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  border-bottom: 2px solid #123c60;
+}
 
-  nav a {
-    text-decoration: none;
-    color: #123c60;
-    font-weight: bold;
-  }
+nav a {
+  text-decoration: none;
+  color: #123c60;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
 
-  nav a:hover {
-    color: #156f49;
-  }
+nav a.active {
+  border-bottom: 3px solid #156f49;
+}
+
+nav a:hover {
+  color: #156f49;
+}
+``
 
   .container {
     max-width: 900px;
