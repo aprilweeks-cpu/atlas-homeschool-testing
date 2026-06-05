@@ -4,32 +4,52 @@
   <meta charset="UTF-8">
   <title>ATLAS Homeschool Testing FAQ</title>
 
-   <style>
+  <style>
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background-color: #f7f9fb;
-    color: #333;
-    line-height: 1.6;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #f7f9fb;
+  color: #333;
+  line-height: 1.6;
+}
 
-header {
+/* HEADER */
+.header-bar {
   background-color: #123c60;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.logo {
+  height: 85px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-logo { left: 80px; }
+.right-logo { right: 80px; }
+
+.header-text {
   text-align: center;
-  padding: 25px 20px;
+  max-width: 600px;
 }
 
-
-header h1 {
-  margin: 6px 0;
+.header-text h1 {
+  margin: 6px 0 4px 0;
+  font-size: 35px;
 }
 
-header p {
+.header-text p {
   margin: 2px 0;
+  font-size: 16px;
 }
 
-
+/* NAVIGATION */
 nav {
   background-color: white;
   display: flex;
@@ -53,105 +73,75 @@ nav a.active {
 nav a:hover {
   color: #156f49;
 }
-``
 
+/* LAYOUT */
 .container {
-  max-width: 850px;       
-  margin: 30px auto;      
+  max-width: 850px;
+  margin: 30px auto;
   padding: 30px 20px;
 }
 
-  h2 {
-    color: #123c60;
-    margin-top: 40px;
-    border-bottom: 2px solid #e5e5e5;
-    padding-bottom: 5px;
-  }
-
-  .button {
-    display: inline-block;
-    background-color: #156f49;
-    color: white;
-    padding: 12px 22px;
-    margin-top: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-
-  .button:hover {
-    background-color: #0f5539;
-  }
-
-  .alert {
-    background-color: #fff4cc;
-    border-left: 5px solid #d42927;
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 4px;
-  }
-
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: #666;
-    margin-top: 40px;
-  }
-
-  ul {
-    padding-left: 20px;
-  }
-    
-
+/* CARDS */
 .container > div {
   background-color: white;
   padding: 12px 20px 18px 20px;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  margin-bottom: 25px;   
+  margin-bottom: 25px;
 }
 
-.container {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 30px 20px;
-}
-
+/* CONTENT */
 h2 {
   color: #123c60;
-  margin-top: 0;        
+  margin-top: 0;
   margin-bottom: 12px;
   border-bottom: 2px solid #e5e5e5;
   padding-bottom: 5px;
 }
-   
+
 p {
   margin-bottom: 10px;
 }
- 
+
+ul {
+  padding-left: 20px;
+}
+
+.alert {
+  background-color: #fff4cc;
+  border-left: 5px solid #d42927;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
 .alert p {
   margin: 5px 0;
 }
-    nav a {
-  padding: 8px 12px;
+
+.button {
+  display: inline-block;
+  background-color: #156f49;
+  color: white;
+  padding: 12px 22px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-nav a.active {
-  border-bottom: 3px solid #156f49;
+.button:hover {
+  background-color: #0f5539;
 }
-.container > div {
-  background-color: white;
+
+/* FOOTER */
+footer {
+  text-align: center;
   padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 14px;
+  color: #666;
+  margin-top: 40px;
 }
-
-header img {
-  height: 80px;
-  margin-bottom: 8px;
-}
-
   </style>
   
 </head>
