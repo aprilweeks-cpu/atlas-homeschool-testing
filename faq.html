@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>ATLAS Homeschool Testing FAQ</title>
 
-  <style>
+ <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
@@ -29,15 +29,24 @@
     h2 {
       color: #123c60;
       margin-top: 40px;
+      border-bottom: 2px solid #e5e5e5;
+      padding-bottom: 5px;
     }
 
-    .question {
-      font-weight: bold;
+    .alert {
+      background-color: #fff4cc;
+      border-left: 5px solid #d42927;
+      padding: 15px;
       margin-top: 20px;
+      border-radius: 4px;
     }
 
-    .answer {
-      margin-left: 10px;
+    ul {
+      padding-left: 20px;
+    }
+
+    .container > div {
+      margin-bottom: 40px;
     }
 
     a.back {
@@ -47,6 +56,28 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+    nav {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+  border-bottom: 2px solid #123c60;
+}
+
+nav a {
+  text-decoration: none;
+  color: #123c60;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #156f49;
+}
   </style>
 </head>
 
