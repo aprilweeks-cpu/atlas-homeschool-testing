@@ -123,6 +123,17 @@ ul {
   font-weight: bold;
 }
 
+.button {
+  display: inline-block;
+  background-color: #156f49;
+  color: white !important;
+  padding: 12px 22px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 .button:hover {
   background-color: #0f5539;
 }
