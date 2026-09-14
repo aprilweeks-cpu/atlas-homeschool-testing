@@ -87,11 +87,39 @@
 <p id="error-message" style="color:red;"></p>
 `
 
+   <script>
+function validateSelections() {
+
+    const session1 = document.getElementById("session1").value;
+    const session2 = document.getElementById("session2").value;
+    const session3 = document.getElementById("session3").value;
+
+    const error = document.getElementById("error-message");
+
+    if (
+        session1 !== "" &&
+        (session1 === session2 ||
+         session1 === session3 ||
+         session2 === session3)
+    ) {
+        error.textContent =
+            "Please select three different testing sessions.";
+
+        return false;
+    }
+
+    error.textContent = "";
+
+    return true;
+}
+</script>
+    
   <div>
 
-    <button class="button">
-      Submit Schedule
-    </button>
+<button class="button" onclick="validateSelections()">
+    Submit Schedule
+</button>
+
 
   </div>
 
