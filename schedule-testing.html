@@ -99,6 +99,31 @@
 
 <script>
 
+function validateSelections() {
+
+    const session1 = document.getElementById("session1").value;
+    const session2 = document.getElementById("session2").value;
+    const session3 = document.getElementById("session3").value;
+
+    const error = document.getElementById("error-message");
+
+    if (
+        session1 !== "" &&
+        (session1 === session2 ||
+         session1 === session3 ||
+         session2 === session3)
+    ) {
+        error.textContent =
+            "Please select three different testing sessions.";
+
+        return false;
+    }
+
+    error.textContent = "";
+
+    return true;
+}
+
 function updateSummary() {
 
     document.getElementById("summary1").textContent =
