@@ -171,19 +171,6 @@ async function submitSchedule() {
 
 }
 
-    const result =
-        await response.json();
-
-    if (result.success) {
-
-        alert(
-            "Schedule submitted successfully."
-        );
-
-    }
-
-}
-
 let sessions = [];
 async function loadSessionData() {
 
