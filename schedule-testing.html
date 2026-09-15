@@ -109,7 +109,16 @@ session availability.
 <p id="error-message" style="color:red;"></p>
 
 <script>
+async function submitSchedule() {
 
+    alert("Submit button clicked!");
+
+    if (!validateSelections()) {
+        return;
+    }
+
+    ...
+}
     async function submitSchedule() {
 
     if (!validateSelections()) {
