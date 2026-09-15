@@ -51,9 +51,6 @@
 
     <select id="session1"onchange="updateSummary()">
       <option value="">Select a Session</option>
-      <option>April 14, 2027 - 9:00 AM</option>
-      <option>April 14, 2027 - 1:00 PM</option>
-      <option>April 15, 2027 - 9:00 AM</option>
     </select>
 
   </div>
@@ -64,9 +61,6 @@
 
     <select id="session2"onchange="updateSummary()">
       <option value="">Select a Session</option>
-      <option>April 14, 2027 - 9:00 AM</option>
-      <option>April 14, 2027 - 1:00 PM</option>
-      <option>April 15, 2027 - 9:00 AM</option>
     </select>
 
   </div>
@@ -77,9 +71,6 @@
 
     <select id="session3"onchange="updateSummary()">
       <option value="">Select a Session</option>
-      <option>April 14, 2027 - 9:00 AM</option>
-      <option>April 14, 2027 - 1:00 PM</option>
-      <option>April 15, 2027 - 9:00 AM</option>
     </select>
 
   </div>
@@ -98,6 +89,61 @@
 `
 
 <script>
+
+const sessions = [
+
+{
+    date: "April 12, 2026",
+    time: "9:00 AM",
+    remaining: 30
+},
+
+{
+    date: "April 13, 2026",
+    time: "9:00 AM",
+    remaining: 10
+},
+
+{
+    date: "April 14, 2026",
+    time: "9:00 AM",
+    remaining: 20
+}
+
+];
+
+function loadSessions() {
+
+    const dropdowns = [
+        document.getElementById("session1"),
+        document.getElementById("session2"),
+        document.getElementById("session3")
+    ];
+
+    dropdowns.forEach(dropdown => {
+
+        sessions.forEach(session => {
+
+            const option = document.createElement("option");
+
+            option.value =
+                session.date + " " + session.time;
+
+            option.textContent =
+                session.date +
+                " • " +
+                session.time +
+                " (" +
+                session.remaining +
+                " seats remaining)";
+
+            dropdown.appendChild(option);
+
+        });
+
+    });
+
+}
 
 function validateSelections() {
 
@@ -138,6 +184,8 @@ function updateSummary() {
         "Session 3: " +
         document.getElementById("session3").value;
 }
+
+    window.onload = loadSessions;
 </script>
     
   <div>
