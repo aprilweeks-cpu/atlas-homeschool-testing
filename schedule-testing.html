@@ -111,7 +111,13 @@ session availability.
 <script>
 
 async function submitSchedule() {
+
+alert("1. Function started");
+if (!validateSelections()) {
+return;
+}
  
+alert("2. Validation passed");
 alert("Submit button clicked!");
  
 if (!validateSelections()) {
