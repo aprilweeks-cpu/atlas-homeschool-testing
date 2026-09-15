@@ -97,27 +97,18 @@ session availability.
 
 <script>
 
-const sessions = [
+let sessions = [];
+async function loadSessionData() {
 
-{
-    date: "April 12, 2026",
-    time: "9:00 AM",
-    remaining: 30
-},
+    const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzdR4qjCm0k0TGHIcDgGpY03Ak9-J-24xO1CFbWY_sTrNT2TH7eC_xMTOmcK6VSKTTN/exec"
+    );
 
-{
-    date: "April 13, 2026",
-    time: "9:00 AM",
-    remaining: 10
-},
+    sessions = await response.json();
 
-{
-    date: "April 14, 2026",
-    time: "9:00 AM",
-    remaining: 20
+    loadSessions();
+
 }
-
-];
 
 function loadSessions() {
 
@@ -192,7 +183,7 @@ function updateSummary() {
         document.getElementById("session3").value;
 }
 
-    window.onload = loadSessions;
+    window.onload = loadSessionData;
 </script>
     
   <div>
