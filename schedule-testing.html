@@ -52,6 +52,20 @@ session availability.
 
   </div>
 
+    <div>
+
+  <h2>Student Information</h2>
+
+  <label for="studentName">Student Name</label>
+  <input type="text" id="studentName">
+
+  <br><br>
+
+  <label for="parentEmail">Parent Email</label>
+  <input type="email" id="parentEmail">
+
+</div>
+    
   <div>
 
     <h2>Testing Session #1</h2>
@@ -94,6 +108,54 @@ session availability.
 
 <p id="error-message" style="color:red;"></p>
 `
+async function submitSchedule() {
+
+    if (!validateSelections()) {
+        return;
+    }
+
+    const reservation = {
+
+        studentName:
+            document.getElementById("studentName").value,
+
+        parentEmail:
+            document.getElementById("parentEmail").value,
+
+        session1:
+            document.getElementById("session1").value,
+
+        session2:
+            document.getElementById("session2").value,
+
+        session3:
+            document.getElementById("session3").value
+
+    };
+
+    const response =
+        await fetch(
+            "YOUR_WEB_APP_URL_HERE",
+            {
+                method: "POST",
+                body: JSON.stringify(
+                    reservation
+                )
+            }
+        );
+
+    const result =
+        await response.json();
+
+    if (result.success) {
+
+        alert(
+            "Schedule submitted successfully."
+        );
+
+    }
+
+}
 
 <script>
 
@@ -188,7 +250,7 @@ function updateSummary() {
     
   <div>
 
-<button class="button" onclick="validateSelections()">
+<button class="button" onclick="submitSchedule()">
     Submit Schedule
 </button>
 
