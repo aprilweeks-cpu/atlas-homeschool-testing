@@ -107,8 +107,10 @@ session availability.
 </div>
 
 <p id="error-message" style="color:red;"></p>
-`
-async function submitSchedule() {
+
+<script>
+
+    async function submitSchedule() {
 
     if (!validateSelections()) {
         return;
@@ -135,7 +137,7 @@ async function submitSchedule() {
 
     const response =
         await fetch(
-            "YOUR_WEB_APP_URL_HERE",
+            "https://script.google.com/macros/s/AKfycbzdR4qjCm0k0TGHIcDgGpY03Ak9-J-24xO1CFbWY_sTrNT2TH7eC_xMTOmcK6VSKTTN/exec",
             {
                 method: "POST",
                 body: JSON.stringify(
@@ -156,8 +158,6 @@ async function submitSchedule() {
     }
 
 }
-
-<script>
 
 let sessions = [];
 async function loadSessionData() {
