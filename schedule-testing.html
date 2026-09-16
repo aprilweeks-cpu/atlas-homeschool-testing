@@ -168,13 +168,29 @@ async function submitSchedule() {
         const result =
             await response.json();
 
-        if (result.success) {
+if (result.success) {
 
-            alert(
-              "Reservation saved!"
-            );
+    if (
+      result.action === "created"
+    ) {
 
-        }
+        alert(
+          "Reservation created!"
+        );
+
+    }
+
+    if (
+      result.action === "updated"
+    ) {
+
+        alert(
+          "Reservation updated!"
+        );
+
+    }
+
+}
 
     }
 
