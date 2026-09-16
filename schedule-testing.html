@@ -124,6 +124,15 @@ async function submitSchedule() {
         button.textContent =
            "Submitting...";
 
+        await new Promise(
+        resolve => setTimeout(resolve, 50)
+        );
+
+        document.getElementById(
+          "statusMessage"
+        ).textContent =
+          "Please wait while your reservation is being processed...";
+
         const studentName =
             document.getElementById(
                 "studentName"
@@ -188,6 +197,14 @@ async function submitSchedule() {
 
         const result =
             await response.json();
+
+        document.getElementById(
+           "statusMessage"
+        ).textContent =
+           "Your reservation has been successfully saved and a confirmation email has been sent.";
+
+        button.textContent =
+          "Schedule Submitted";
 
 if (result.success) {
 
@@ -411,16 +428,6 @@ document.getElementById(
 </button>
 
 <p id="statusMessage"></p>
-
-      document.getElementById(
-    "statusMessage"
-).textContent =
-    "Please wait while your reservation is being processed...";
-
-      document.getElementById(
-    "statusMessage"
-).textContent =
-    "Your reservation has been successfully saved and a confirmation email has been sent.";
 
   </div>
 
