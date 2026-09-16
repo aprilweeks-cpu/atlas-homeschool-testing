@@ -293,9 +293,73 @@ function updateSummary() {
         document.getElementById("session3").value;
 }
 
-    window.onload = loadSessionData;
+    window.onload = async function() {
+
+    await validateCodeFromUrl();
+
+    await loadSessionData();
+
+};
     console.log("SCRIPT LOADED");
     window.submitSchedule = submitSchedule;
+
+async function validateCodeFromUrl() {
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const code =
+        params.get("code");
+
+    if (!code) {
+
+        alert(
+          "No scheduling code provided."
+        );
+
+        return;
+
+    }
+
+    const response =
+        await fetch(
+
+            "YOUR_WEB_APP_URL" +
+
+            "?action=validateCode" +
+
+            "&code=" +
+
+            encodeURIComponent(code)
+
+        );
+
+    const result =
+        await response.json();
+
+    if (!result.valid) {
+
+        alert(
+          "Invalid scheduling code."
+        );
+
+        return;
+
+    }
+
+    document.getElementById(
+        "studentName"
+    ).value =
+        result.studentName;
+
+    document.getElementById(
+        "parentEmail"
+    ).value =
+        result.parentEmail;
+
+}
 </script>
     
   <div>
