@@ -124,6 +124,14 @@ async function submitSchedule() {
                 "parentEmail"
             ).value;
 
+        const params =
+           new URLSearchParams(
+             window.location.search
+          );
+
+        const schedulingCode =
+        params.get("code");
+        
         const session1 =
             document.getElementById(
                 "session1"
@@ -152,7 +160,10 @@ async function submitSchedule() {
                 "&parentEmail=" +
                 encodeURIComponent(parentEmail) +
 
-                "&schedulingCode=TEST123" +
+                "&schedulingCode=" +
+                encodeURIComponent(
+                schedulingCode
+                ) +
 
                 "&session1=" +
                 encodeURIComponent(session1) +
