@@ -138,6 +138,11 @@ ul {
   background-color: #0f5539;
 }
 
+input[readonly] {
+    background-color: #f3f3f3;
+    color: #555;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
