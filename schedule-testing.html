@@ -114,6 +114,16 @@ async function submitSchedule() {
 
     try {
 
+        const button =
+            document.getElementById(
+             "submitButton"
+            );
+
+        button.disabled = true;
+
+        button.textContent =
+           "Submitting...";
+
         const studentName =
             document.getElementById(
                 "studentName"
@@ -206,6 +216,16 @@ if (result.success) {
     }
 
     catch(error) {
+
+        const button =
+           document.getElementById(
+             "submitButton"
+           );
+
+        button.disabled = false;
+  
+        button.textContent =
+          "Submit Schedule";
 
         alert(
           "ERROR: " +
@@ -383,10 +403,24 @@ document.getElementById(
     
   <div>
 
-<button class="button" onclick="submitSchedule()">
+<button
+    id="submitButton"
+    class="button"
+    onclick="submitSchedule()">
     Submit Schedule
 </button>
 
+<p id="statusMessage"></p>
+
+      document.getElementById(
+    "statusMessage"
+).textContent =
+    "Please wait while your reservation is being processed...";
+
+      document.getElementById(
+    "statusMessage"
+).textContent =
+    "Your reservation has been successfully saved and a confirmation email has been sent.";
 
   </div>
 
