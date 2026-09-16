@@ -114,21 +114,15 @@ async function submitSchedule() {
 
     try {
 
-        alert("1. Function started");
-
-        if (!validateSelections()) {
-            return;
-        }
-
-        alert("2. Validation passed");
+        alert("1");
 
         const reservation = {
 
-            studentName:
-                document.getElementById("studentName").value,
+            studentName: "Test Student",
 
-            parentEmail:
-                document.getElementById("parentEmail").value,
+            parentEmail: "test@test.com",
+
+            schedulingCode: "TEST123",
 
             session1:
                 document.getElementById("session1").value,
@@ -141,29 +135,37 @@ async function submitSchedule() {
 
         };
 
-        alert("3. Reservation built");
+        alert("2");
 
         const response =
             await fetch(
                 "https://script.google.com/macros/s/AKfycbzdR4qjCm0k0TGHIcDgGpY03Ak9-J-24xO1CFbWY_sTrNT2TH7eC_xMTOmcK6VSKTTN/exec",
                 {
                     method: "POST",
-                    body: JSON.stringify(reservation)
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+                    body:
+                        JSON.stringify(reservation)
                 }
             );
 
-        alert("4. Fetch completed");
+        alert("3");
 
-        const result =
-            await response.json();
+        const text =
+            await response.text();
 
-        alert("5. JSON received");
+        alert(text);
 
     }
 
     catch(error) {
 
-        alert("ERROR: " + error.message);
+        alert(
+            "ERROR: " +
+            error.message
+        );
 
         console.error(error);
 
